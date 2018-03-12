@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+  body
+    nav.navbar.navbar-expand-lg.navbar-light.bg-light
+      a.navbar-brand(href='/') Navbar
+      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      #navbarNav.collapse.navbar-collapse
+        ul.navbar-nav
+          li.nav-item(class= title == 'Home' ? 'active' : undefined)
+            a.nav-link(href='/')
+              | Home
+              span.sr-only (current)
+          li.nav-item(class= title == 'About' ? 'active' : undefined)
+            a.nav-link(href='/about') About
+          li.nav-item(class= title == 'Servies' ? 'active' : undefined)
+            a.nav-link(href='/services') Servies
+          li.nav-item(class= title == 'Contact' ? 'active' : undefined)
+            a.nav-link(href='/contact') Contact us
+
+    block content
+  hr
+  footer
+    p &copy; 2018 Pc Repair 2018
